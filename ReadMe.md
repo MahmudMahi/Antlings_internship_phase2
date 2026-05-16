@@ -157,6 +157,7 @@ Metric Definitions:
 ![perf_img](model_params\confusion_matrix_normalized.png)
 
 Key Observations:
+    
     1. **CAR** detection is strongest: 74% of true cars are correctly detected.
     However, 26% of true cars are missed (false negatives / *background*).
 
