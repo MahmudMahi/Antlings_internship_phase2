@@ -9,14 +9,14 @@ VisDrone2019 dataset to detect three object categories from drone imagery:
     - other  (bicycles, tricycles, motorcycles, and miscellaneous objects)
 
 The notebook (Antlings_mahmud.ipynb) covers the full pipeline: data ingestion, class remapping, **YOLO**-format preprocessing, model training, inference, and evaluation with visual diagnostics.
+Final human counting and object tracking output using this model: <https://drive.google.com/drive/folders/1YrYvaSve1KMpgk45B7evi4XYXjLsYzxo?usp=drive_link>
 
 # FILE MANIFEST
     Antlings_mahmud.ipynb           - Main training & evaluation notebook
     antlings_app.py                 - Object tracking script (plus counting logic is implemented here as well)
     antlings_human_count.py         - script for counting human in a static image
-    original_media_files            - actual video and image that was experimented on, no annotations here
-    annotated_media_files           - after running the scripts, in this folder the output images and videos are stored.
     visdrone_human_car-4            - the trained model file
+    model_params                    - model performance evaluaton graphs, confusion matrix and sample model validation outputs
     README.txt                      - This file
 
 
@@ -40,7 +40,7 @@ The original VisDrone dataset has 12 fine-grained categories. These are collapse
     0    | human    | pedestrian (0), people (1)
     1    | car      | car (3), van (4), truck (5), bus (8)
     2    | other    | bicycle (2), tricycle (6), awning-tricycle (7),
-    |          | motor (9), others (10)
+                    | motor (9), others (10)
 
   *Note: At first I tried to map only car, people and pedestrian but that resulted in very poor performance of the model as it skipped most of the dataset. So merging a lot different objects under those 3 super classes resulted in better data handling and more training efficiency* 
 
