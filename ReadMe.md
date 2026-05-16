@@ -1,6 +1,6 @@
 **ANTLINGS** — VisDrone Object Detection with YOLOv8
 
-## PROJECT OVERVIEW
+## ASSESSMENT OVERVIEW
 
 This project fine-tunes a YOLOv8n (nano) model on a remapped subset of the
 VisDrone2019 dataset to detect three object categories from drone imagery:
