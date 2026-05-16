@@ -37,10 +37,10 @@ The original VisDrone dataset has 12 fine-grained categories. These are collapse
 
     New ID | New Name | Original VisDrone Classes Included
     -------|----------|--------------------------------------------
-    0    | human    | pedestrian (0), people (1)
-    1    | car      | car (3), van (4), truck (5), bus (8)
-    2    | other    | bicycle (2), tricycle (6), awning-tricycle (7),
-                    | motor (9), others (10)
+    0      | human    | pedestrian (0), people (1)
+    1      | car      | car (3), van (4), truck (5), bus (8)
+    2      | other    | bicycle (2), tricycle (6), awning-tricycle (7),
+                         motor (9), others (10)
 
   *Note: At first I tried to map only car, people and pedestrian but that resulted in very poor performance of the model as it skipped most of the dataset. So merging a lot different objects under those 3 super classes resulted in better data handling and more training efficiency* 
 
