@@ -152,7 +152,7 @@ Metric Definitions:
     small, cluttered targets
 ![perf_img](model_params/BoxPR_curve.png)
 
- # CONFUSION MATRIX ANALYSIS Raw Counts ():
+ # CONFUSION MATRIX ANALYSIS:
 
 ![perf_img](model_params/confusion_matrix_normalized.png)
 
