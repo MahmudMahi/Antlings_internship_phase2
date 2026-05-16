@@ -52,11 +52,11 @@ Output is written to:
 
     visdrone_custom/
     ├── images/
-    │   ├── train/   (6,**471** .jpg files)
-    │   └── val/     (**548** .jpg files)
+    │   ├── train/
+    │   └── val/
     └── labels/
-    ├── train/   (6,**471** .txt files)
-    └── val/     (**548** .txt files)
+    ├── train/  
+    └── val/    
 
 A data.yaml configuration file points to the custom root and lists the three class names (human, car, other) for Ultralytics training.
 
