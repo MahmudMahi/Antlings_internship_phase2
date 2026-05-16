@@ -119,22 +119,22 @@ Metric Definitions:
 
 # F1-Confidence Curve 
     - Best overall F1 : 0.51 at confidence threshold 0.**237**
-    - *car* peaks at F1 ≈ 0.75, the strongest class
-    - *human* and *other* plateau near F1 ≈ 0.42
+    - car peaks at F1 ≈ 0.75, the strongest class
+    - human and other plateau near F1 ≈ 0.42
     - All classes drop sharply beyond confidence 0.6, indicating the model is
     more conservative at high-confidence thresholds
 ![perf_img](model_params/BoxF1_curve.png)
 
 # Precision-Confidence Curve  
-    - Precision reaches 1.00 at confidence ≈ 0.**962** for all classes
-    - *car* achieves high precision earliest (rises steeply from low confidence)
+    - Precision reaches 1.00 at confidence ≈ 0.962 for all classes
+    - car achieves high precision earliest (rises steeply from low confidence)
     - All classes converge to near-perfect precision above 0.90 confidence
 ![perf_img](model_params/BoxP_curve.png)
 
 # Recall-Confidence Curve 
-    - Maximum recall (all classes): 0.64 at confidence 0.**000**
-    - *car* recall starts at 0.82 and stays high until confidence ≈ 0.7
-    - *human* and *other* recall drops quickly — starts at ~0.52–0.60 and
+    - Maximum recall (all classes): 0.64 at confidence 0.000
+    - car recall starts at 0.82 and stays high until confidence ≈ 0.7
+    - human and other recall drops quickly — starts at ~0.52–0.60 and
     falls below 0.1 by confidence 0.7
     - Indicates the model misses many small or partially occluded objects
     at higher thresholds
@@ -142,13 +142,13 @@ Metric Definitions:
 
 # Precision-Recall Curve  (BoxPR_curve.png)
     - mAP@0.5 (area under curve):
-    human : 0.**350**
-    car   : 0.**750**
-    other : 0.**337**
-    **ALL**   : 0.**479**
-    - *car* PR curve is wide (recall up to ~0.82 at high precision), reflecting
+    human : 0.350
+    car   : 0.750
+    other : 0.337
+    ALL   : 0.479
+    - car PR curve is wide (recall up to ~0.82 at high precision), reflecting
     the strong detectability of vehicle shapes from drone altitude
-    - *human* and *other* PR curves are narrow, confirming low recall for
+    - human and *other* PR curves are narrow, confirming low recall for
     small, cluttered targets
 ![perf_img](model_params/BoxPR_curve.png)
 
@@ -158,23 +158,23 @@ Metric Definitions:
 
 Key Observations:
     
-    1. **CAR** detection is strongest: 74% of true cars are correctly detected.
-    However, 26% of true cars are missed (false negatives / *background*).
+    1. CAR detection is strongest: 74% of true cars are correctly detected.
+    However, 26% of true cars are missed (false negatives / background).
 
-    2. **HUMAN** detection is weak: only 33% of true humans are detected correctly.
+    2. HUMAN detection is weak: only 33% of true humans are detected correctly.
     66% of true humans are classified as background (missed entirely), and
     another 32% of background predictions are actually true human objects
     that the model confidently but wrongly suppresses.
 
-    3. **OTHER** class struggles similarly: 29% true-positive rate, with 62% of
-    true *other* objects falling into background (missed).
+    3. OTHER class struggles similarly: 29% true-positive rate, with 62% of
+    true other objects falling into background (missed).
 
     4. High false-negative rates are consistent with the VisDrone challenge —
     objects are small, dense, and often partially occluded, making recall
     the key limiting factor across all classes.
 
     5. Cross-class confusion is low: misclassification between human/car/other
-    is minimal (e.g., only 0.06 of true *other* are predicted as *human*),
+    is minimal (e.g., only 0.06 of true other are predicted as *human*),
     meaning the model's class boundaries are reasonable once it detects.
 
 # What would have improved the model more
