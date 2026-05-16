@@ -10,7 +10,6 @@ VisDrone2019 dataset to detect three object categories from drone imagery:
 
 The notebook (Antlings_mahmud.ipynb) covers the full pipeline: data ingestion, class remapping, **YOLO**-format preprocessing, model training, inference, and evaluation with visual diagnostics.
 
-================================================================================
 # FILE MANIFEST
     Antlings_mahmud.ipynb           - Main training & evaluation notebook
     antlings_app.py                 - Object tracking script (plus counting logic is implemented here as well)
@@ -50,6 +49,7 @@ The remapping is applied at preprocessing time. Each raw label file is parsed li
 ## CUSTOM DATASET LAYOUT
 
 Output is written to:
+
     visdrone_custom/
     ├── images/
     │   ├── train/   (6,**471** .jpg files)
