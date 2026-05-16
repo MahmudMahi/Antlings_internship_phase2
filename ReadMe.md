@@ -94,9 +94,9 @@ The pretrained head is replaced and re-initialized for nc=3 classes.
     - RandAugment auto-augmentation policy
 
 ## SAMPLE INFERENCE OUTPUT (Validation Set)
-![img](model_params\val_batch0_pred.jpg)
-![img](model_params\val_batch1_pred.jpg)
-![img](model_params\val_batch2_pred.jpg)
+![img](model_params/val_batch0_pred.jpg)
+![img](model_params/val_batch1_pred.jpg)
+![img](model_params/val_batch2_pred.jpg)
 
 # SECTION 3 — EVALUATION & VISUALIZATION
 ## VALIDATION SETUP
@@ -123,13 +123,13 @@ Metric Definitions:
     - *human* and *other* plateau near F1 ≈ 0.42
     - All classes drop sharply beyond confidence 0.6, indicating the model is
     more conservative at high-confidence thresholds
-![perf_img](model_params\BoxF1_curve.png)
+![perf_img](model_params/BoxF1_curve.png)
 
 # Precision-Confidence Curve  
     - Precision reaches 1.00 at confidence ≈ 0.**962** for all classes
     - *car* achieves high precision earliest (rises steeply from low confidence)
     - All classes converge to near-perfect precision above 0.90 confidence
-![perf_img](model_params\BoxP_curve.png)
+![perf_img](model_params/BoxP_curve.png)
 
 # Recall-Confidence Curve 
     - Maximum recall (all classes): 0.64 at confidence 0.**000**
@@ -138,7 +138,7 @@ Metric Definitions:
     falls below 0.1 by confidence 0.7
     - Indicates the model misses many small or partially occluded objects
     at higher thresholds
-![perf_img](model_params\BoxR_curve.png)
+![perf_img](model_params/BoxR_curve.png)
 
 # Precision-Recall Curve  (BoxPR_curve.png)
     - mAP@0.5 (area under curve):
@@ -150,11 +150,11 @@ Metric Definitions:
     the strong detectability of vehicle shapes from drone altitude
     - *human* and *other* PR curves are narrow, confirming low recall for
     small, cluttered targets
-![perf_img](model_params\BoxPR_curve.png)
+![perf_img](model_params/BoxPR_curve.png)
 
  # CONFUSION MATRIX ANALYSIS Raw Counts ():
 
-![perf_img](model_params\confusion_matrix_normalized.png)
+![perf_img](model_params/confusion_matrix_normalized.png)
 
 Key Observations:
     
